@@ -1,0 +1,19 @@
+@charset "utf-8";
+.bg-color{
+    background-image: linear-gradient(white,#F72C5B);
+}
+
+h1{
+    font-family: serif;
+}
+
+.omikuji{
+    height: 15rem;
+}
+.draw-button{
+    border-radius: 20px;
+    background: #F72C5B;
+    font-family: serif;
+    border: none;
+    color: white;
+}

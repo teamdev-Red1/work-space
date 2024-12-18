@@ -1,0 +1,88 @@
+/* Main container */
+#omikuji-page {
+  background-color: #f0f8ff;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* おみくじ */
+.omikuji{
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+}
+
+/* タイトル */
+.omikuji h5 {
+  font-family: 'Yuji Syuku', sans-serif;
+  font-size: 1,5rem;
+  color: #dc3545;
+  margin-bottom: 20px
+}
+
+.line-red {
+  border: 0;
+  height: 2px;
+  background: #dc3545;
+
+}
+
+/* おみくじ画像 */
+.illust {
+  width: 150px;
+  height: auto;
+  margin: 20px 0;
+}
+
+/*おみくじ運勢*/
+.fortune {
+  font-family: 'Yuji Syuku', sans-serif;
+  font-size: 2.5rem;
+  color: #dc3545;
+  margin: 20px 0;
+}
+
+/*おみくじ説明*/
+#omikuji-description{
+  font-size: 1.2rem;
+  color: #6c757d;
+  margin: 20px 0;
+}
+
+/*ラッキーアイテムの欄のスタイル*/
+.mb-3 {
+  margin-bottom: 1rem !important;
+}
+
+/*ラッキーアイテムのタイトル*/
+.omikuji-page p.text-center{
+  font-size: 1.2rem;
+  color: #dc3545;
+  margin: 10px 0;
+}
+
+/*ラッキーアイテムの本文*/
+.omikuji-page h5.text-center{
+  font-size: 1.5rem;
+  color: #dc3545;
+  margin-bottom: 15px;
+}
+
+/*もう一度おみくじ引くボタン*/
+#re-draw-omikuji{
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+}
+
+#re-draw-omikuji:hover {
+  background-color: #c82333;
+}

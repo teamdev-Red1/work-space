@@ -2,6 +2,8 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <!--CSS-->
     <link rel="stylesheet" href="omikuji-page.css" />
 
@@ -17,7 +19,7 @@
     <div
     id ="omikuji-page"
     class = "vh-100 d-flex justify-content-center align-items-center flex-column">
-      <div class = "omilji bg-white d-flex justify-content-start align-items-center flex-column my-3">
+      <div class = "omikuji bg-white d-flex justify-content-start align-items-center flex-column my-3">
         <div>
           <h5 class = "text-danger yuji-syuku pt-3">ソフトウェア開発みくじ</h5>
         </div>
@@ -25,7 +27,7 @@
         <div>
           <hr class="line-red" />
           <!--おみくじ画像-->
-          <img id = "omikuji-image" class="illust" src="" alt="おみくじ画像"/>
+          <img id = "omikuji-image" class="illust" src="images/pose_dance_ukareru_woman.png" alt="おみくじ画像"/>
           <!--おみくじ運勢-->
           <h1 id="omikuji-fortune" class="fortune text-danger yuji-syuku text-center"></h1>
           <hr class = "line-red" />
@@ -38,10 +40,12 @@
           <hr class = "line-red" />
           <!--ラッキー言語-->
           <pS class="text-center text-danger yuji-syuku">✿ ラッキー言語 ✿</pS>
-          <h5 id="omikuji-lucky-lang" class="text-danger yuji-syuku text-center"></h5>
+          <h5 id="omikuji-lucky-lang" class="text-danger yuji-syuku text-center">C++</h5>
+          <hr class ="line-red">
           <!--ラッキーデータベース-->
           <p class="text-center text-danger yuji-syuku">✿ ラッキーデータベース ✿</p>
           <h5 id="omikuji-lucky-db" class="text-danger yuji-syuku text-center"></h5>
+          <hr class = "line-red">
           <!--ラッキーエディタ-->
           <p class="text-center text-danger yuji-syuku">✿ ラッキーエディタ ✿</p>
           <h5 id="omikuji-lucky-editor" class="text-danger yuji-syuku text-center"></h5>
@@ -51,7 +55,7 @@
           <button
           id = "re-draw-omikuji"
           type="button"
-          class = "btn btn-danger round-pill yuji-syuku">
+          class = "btn btn-danger round-pill yuji-syuku small-font">
             もう一度おみくじを引く
           </button>
         </div>

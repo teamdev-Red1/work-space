@@ -19,6 +19,9 @@ h1{
     border: none;
     color: white;
 }
+.button:hover{
+    background: #ff63c3;
+}
 .member-container{
     border: medium double #ff63c3;
     background-color: white;
@@ -27,11 +30,17 @@ h1{
     height: auto;
     
 }
+body a{
+    color: #F72C5B;
+    text-decoration: none; 
+}
 ul{
     list-style: square;
-    color:blueviolet;
     font-size: 2rem;
 }
 ul li::marker{
     color: #ff63c3;
+}
+ul li a{
+    color: blueviolet;
 }

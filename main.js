@@ -1,7 +1,8 @@
 const CONFIG = {
     mainPage:document.getElementById("main-page"),
-    drawButton:document.querySelector(".draw-button"),
-    member:document.querySelector("#member")
+    drawButton:document.querySelector("#draw-btn"),
+    member:document.querySelector("#member"),
+    return:document.querySelector("#return-btn")
 }
 class display{
     static none(ele){
@@ -14,6 +15,14 @@ class display{
     }
 }
 
-CONFIG.drawButton.addEventListener("click",function(){
+if(document.title == "おみくじ"){
+    CONFIG.drawButton.addEventListener("click",function(){
     display.none(CONFIG.mainPage);
 })
+}
+
+if(document.title == "開発者一覧"){
+    CONFIG.return.addEventListener("click",function(){
+        window.location.href ="index.html";
+    })
+}

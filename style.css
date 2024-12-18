@@ -6,14 +6,32 @@
 h1{
     font-family: serif;
 }
-
+.cherry-color{
+    color: #F72C5B;
+}
 .omikuji{
     height: 15rem;
 }
-.draw-button{
+.button{
     border-radius: 20px;
     background: #F72C5B;
     font-family: serif;
     border: none;
     color: white;
+}
+.member-container{
+    border: medium double #ff63c3;
+    background-color: white;
+    font-family: serif;
+    width: 300px;
+    height: auto;
+    
+}
+ul{
+    list-style: square;
+    color:blueviolet;
+    font-size: 2rem;
+}
+ul li::marker{
+    color: #ff63c3;
 }

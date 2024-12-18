@@ -1,6 +1,7 @@
 const CONFIG = {
     mainPage:document.getElementById("main-page"),
-    drawButton:document.querySelector(".draw-button")
+    drawButton:document.querySelector(".draw-button"),
+    member:document.querySelector("#member")
 }
 class display{
     static none(ele){

@@ -14,6 +14,7 @@
   background-color: #ffffff;
   padding: 30px;
   border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   max-width: 600px;
   width: 100%;
   text-align: center;
@@ -22,16 +23,16 @@
 /* タイトル */
 .omikuji h5 {
   font-family: 'Yuji Syuku', sans-serif;
-  font-size: 1,5rem;
+  font-size: 1.5rem;
   color: #dc3545;
-  margin-bottom: 20px
+  margin-bottom: 20px;
 }
 
 .line-red {
   border: 0;
   height: 2px;
   background: #dc3545;
-
+  margin: 20px 0;
 }
 
 /* おみくじ画像 */

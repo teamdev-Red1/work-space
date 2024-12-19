@@ -2,64 +2,64 @@
 //おみくじの種類を全て記述
 const omikujiData = [
   {
-    image: "images/pose_dance_ukareru_woman.png",
+    image: "images/dance_yorokobi_mai_woman.png",
     fortune: "大吉",
     description: "リリースしたソフトウェアにバグが見つかりますが、再現性が低いためユーザーも上司も誰ひとり気付かないでしょう。見なかったことにするのが吉。",
   },
   {
-    image: "images/daikichi2.png",
+    image: "images/pose_genki09_businessman.png",
     fortune: "大吉",
-    description: "難しい問題もするすると解けます！"
+    description: ""
   },
   {
-    image: "images/kichi1.png",
+    image: "",
     fortune: "吉",
-    description: "そこそこ良いことがあるかも。"
+    description: ""
   },
   {
-    image: "images/kichi2.png",
+    image: "",
     fortune: "吉",
-    description: "小さな幸せが訪れそうです。"
+    description: ""
   },
   {
-    image: "images/chukichi1.png",
+    image: "",
     fortune: "中吉",
-    description: "なかなか良い一日になりそう。"
+    description: ""
   },
   {
-    image: "images/chukichi2.png",
+    image: "",
     fortune: "中吉",
-    description: "人との繋がりが幸運を呼ぶでしょう。"
+    description: ""
   },
   {
-    image: "images/shokichi1.png",
+    image: "",
     fortune: "小吉",
-    description: "少し良いことがあるかもしれません。"
+    description: ""
   },
   {
-    image: "images/shokichi2.png",
+    image: "",
     fortune: "小吉",
-    description: "日常の中に小さな喜びを見つけて。"
+    description: ""
   },
   {
-    image: "images/suekichi1.png",
+    image: "",
     fortune: "末吉",
-    description: "焦らずにいけば良いことあるかも。"
+    description: ""
   },
   {
-    image: "images/suekichi2.png",
+    image: "",
     fortune: "末吉",
-    description: "もう少しの辛抱が吉と出るでしょう。"
+    description: ""
   },
   {
-    image: "images/kyo1.png",
+    image: "images/sick_kaoiro_man.png",
     fortune: "凶",
-    description: "今日は慎重に行動しましょう。"
+    description: "リリースしたソフトウェアに致命的な欠陥が見つかり、それが原因で顧客の機密情報が派手に流出します。仕様で押し通すにはいささか無理がありますので、潔く腹をくくりましょう。"
   },
   {
-    image: "images/kyo2.png",
+    image: "images/food_spaghetti_neapolitan.png",
     fortune: "凶",
-    description: "トラブルに注意が必要です。"
+    description: "前任者から引き継いだコードがスパゲティ状態です。残念ながらあなたの力ではどうにもならないので、せめて自分はこんなコードを書かないように今後の糧にしましょう。"
   }
 ];
 
@@ -68,14 +68,14 @@ const languages = [
   "C++", "C#", "PHP", "Javascript", "Python", "go", "Java", "Ruby", "TypeScript"
 ];
 
-const dbs = ["Oracle Dtabase", "SQL Server", "DB2", "PostgreSQL", "MySQL"];
+const dbs = ["Oracle Database", "SQL Server", "DB2", "PostgreSQL", "MySQL"];
 
-const editors = ["Emacs", "Vim", "Atom", "nano", "Visual Studio code"];
+const editors = ["Emacs", "Vim", "Atom", "nano", "Visual Studio Code"];
 
 
 
 // ページ読み込み後に実行する
-document.addEventListener("DOMContentLoad", () => {
+document.addEventListener("DOMContentLoaded", () => {
   //1~12の乱数を生成
   const randomIndex = Math.floor(Math.random() * 12);
   const selectedOmikuji = omikujiData[randomIndex];
@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoad", () => {
   //HTMLにデータを反映
   document.getElementById("omikuji-image").src = selectedOmikuji.image;
   document.getElementById("omikuji-fortune").innerText = selectedOmikuji.fortune;
-  document.getElementById("omikuji-description".innerText) = selectedOmikuji.description;
+  document.getElementById("omikuji-description").innerText = selectedOmikuji.description;
   document.getElementById("omikuji-lucky-lang").innerText = languages[randomLang];
   document.getElementById("omikuji-lucky-db").innerText = dbs[randomDB];
   document.getElementById("omikuji-lucky-editor").innerText = editors[randomEditor];
@@ -100,6 +100,6 @@ document.addEventListener("DOMContentLoad", () => {
   // もう一度おみくじを引くボタンを押したらトップページに遷移するように
   const reDrawButton = document.getElementById("re-draw-omikuji");
   reDrawButton.addEventListener("click", () => {
-    window.location.href = "omikuji-page.html";
-  })
+    location.reload();
+  });
 });

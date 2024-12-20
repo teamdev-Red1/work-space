@@ -1,3 +1,8 @@
+// 0~numberまでの乱数を整数で生成
+function randomGenerator(number) {
+  randomNumber = Math.floor(Math.random() * number);
+  return randomNumber;
+}
 
 //おみくじの種類を全て記述
 const omikujiData = [
@@ -9,47 +14,47 @@ const omikujiData = [
   {
     image: "images/pose_genki09_businessman.png",
     fortune: "大吉",
-    description: ""
+    description: "GitHub Sponsors を通じて太っ腹なスポンサーがつきます。これであなたの OSS 開発は安泰です!!"
   },
   {
-    image: "",
+    image: "images/pose_dance_ukareru_woman.png",
     fortune: "吉",
-    description: ""
+    description: "リリースしたソフトウェアにバグが見つかりますが、幸いユーザー企業のお偉方は極度のITオンチです。仕様で押し通すのが吉。"
   },
   {
-    image: "",
+    image: "images/pose_dance_ukareru_man.png",
     fortune: "吉",
-    description: ""
+    description: "リファクタリングに成功してプログラムが爆速に!!サクサク動いて気持ちいいーーー!!"
   },
   {
-    image: "",
+    image: "images/pose_genki09_businessman.png",
     fortune: "中吉",
-    description: ""
+    description: "リリースしたソフトウェアに深刻なバグが見つかりますが、口八丁な営業のお陰で事無きを得るでしょう。ただし、後日それを理由に無茶振りされるおそれがあるので油断は禁物です。"
   },
   {
-    image: "",
+    image: "images/pose_anshin_woman.png",
     fortune: "中吉",
-    description: ""
+    description: "git でコンフリクトが発生します!! が、今回は上手く解消できるでしょう。今回は・・・"
   },
   {
-    image: "",
+    image: "images/businessman1_nayami.png",
     fortune: "小吉",
-    description: ""
+    description: "リリース前のソフトウェアにバグが見つかります。貴方のお勤め先が上流の企業ならばそれほど大きな問題にはなりませんが、三次請けよりも下流の場合はご愁傷様でございます。"
   },
   {
-    image: "",
+    image: "images/sweets_wataame_girl2.png",
     fortune: "小吉",
-    description: ""
+    description: "開発の要件定義が綿飴のようにふわっふわです。手遅れにならないうちに手を打っておくのが吉。"
   },
   {
-    image: "",
+    image: "images/sick_kaoiro_man.png",
     fortune: "末吉",
-    description: ""
+    description: "リリース直前に致命的なバグが見つかるでしょう。お泊まりの準備をして出社するのが吉。"
   },
   {
-    image: "",
+    image: "images/kaji_kagamu_woman.png",
     fortune: "末吉",
-    description: ""
+    description: "関わっているプロジェクトから何だか香ばしい匂いがします。炎上する前になんとか逃げるのが吉。"
   },
   {
     image: "images/sick_kaoiro_man.png",
@@ -73,20 +78,18 @@ const dbs = ["Oracle Database", "SQL Server", "DB2", "PostgreSQL", "MySQL"];
 const editors = ["Emacs", "Vim", "Atom", "nano", "Visual Studio Code"];
 
 
-
 // ページ読み込み後に実行する
 document.addEventListener("DOMContentLoaded", () => {
   //1~12の乱数を生成
-  const randomIndex = Math.floor(Math.random() * 12);
+  const randomIndex = randomGenerator(12);
   const selectedOmikuji = omikujiData[randomIndex];
 
   //ラッキー言語の選択
-  const randomLang = Math.floor(Math.random() * 9);
+  const randomLang = randomGenerator(9);
   //ラッキーDBの選択
-  const randomDB = Math.floor(Math.random() * 6);
+  const randomDB = randomGenerator(5);
   //ラッキーエディターの選択
-  const randomEditor = Math.floor(Math.random() * 6);
-
+  const randomEditor = randomGenerator(5);
 
   //HTMLにデータを反映
   document.getElementById("omikuji-image").src = selectedOmikuji.image;
@@ -101,5 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const reDrawButton = document.getElementById("re-draw-omikuji");
   reDrawButton.addEventListener("click", () => {
     location.reload();
+    //トップページに遷移する処理
+    //window.location.href = "index.html"; 
   });
 });

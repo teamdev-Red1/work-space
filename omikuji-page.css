@@ -4,7 +4,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: fixed; /*背景を固定（スクロールの無効化）*/
   padding: 20px;
   min-height: 100vh;
   display: flex;
@@ -20,11 +20,10 @@
 /* おみくじ */
 .omikuji{
   background-color: #ffffff;
-  padding: 30px;
   border: thick double #ff0000;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   height: 150rem;
-  overflow-y: auto;
+  overflow-y: auto; /*スクロールできるように*/
   width: 280px;
   text-align: center;
   outline: 0.2rem solid #ff0000;
@@ -32,10 +31,8 @@
 
 /* タイトル */
 .omikuji h5 {
-  font-family: 'Yuji Syuku', sans-serif;
-  font-size: 1.5rem;
-  color: #dc3545;
-  margin-bottom: 20px;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
 }
 
 hr {
@@ -48,9 +45,12 @@ hr {
   color: inherit;
 }
 
+/*区切り線*/
 .line-red {
   border-top: 2px solid #ff0000;
-  width: 260px;
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* おみくじ画像 */
@@ -83,14 +83,12 @@ hr {
 /*ラッキーアイテムのタイトル*/
 .omikuji-page p.text-center{
   font-size: 1.2rem;
-  color: #ff0000;
   margin: 10px 0;
 }
 
 /*ラッキーアイテムの本文*/
 .omikuji-page h5.text-center{
   font-size: 1.0rem;
-  color: #ff0000;
   margin-bottom: 15px;
 }
 
@@ -99,9 +97,9 @@ hr {
   font-size: 0.8rem;
   padding: 10px 20px;
   border: none;
-  border-radius: 50px;
+  border-radius: 50px; /*丸みを帯びたデザインに*/
 }
-
+/*ホバー時に濃い赤にする*/
 #re-draw-omikuji:hover {
   background-color: #c82333;
 }

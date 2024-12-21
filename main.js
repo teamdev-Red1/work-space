@@ -17,7 +17,9 @@ class display{
 
 if(document.title == "おみくじ"){
     CONFIG.drawButton.addEventListener("click",function(){
-    display.none(CONFIG.mainPage);
+        display.none(CONFIG.mainPage);
+        //omikuji-pageをロードする
+        window.location.href = "omikuji-page.html"
 })
 }
 

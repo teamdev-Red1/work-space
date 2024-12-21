@@ -103,8 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // もう一度おみくじを引くボタンを押したらトップページに遷移するように
   const reDrawButton = document.getElementById("re-draw-omikuji");
   reDrawButton.addEventListener("click", () => {
-    location.reload();
     //トップページに遷移する処理
-    //window.location.href = "index.html"; 
+    window.location.href = "index.html";
   });
 });

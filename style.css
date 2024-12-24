@@ -1,4 +1,5 @@
 @charset "utf-8";
+/*背景の色*/
 .bg-color{
     background-image: linear-gradient(white,#F72C5B);
 }
@@ -22,25 +23,41 @@ h1{
 .button:hover{
     background: #ff63c3;
 }
+/*開発者一覧の枠*/
 .member-container{
     border: medium double #ff63c3;
     background-color: white;
     font-family: serif;
     width: 300px;
     height: auto;
-    
+    font-size: 2rem;
+    color: blueviolet;
+}
+.member-container p{
+    color: black;
+    font-size: 0.8rem;
+}
+/*このおみくじについての枠*/
+.about-container{
+    border: medium double #ff63c3;
+    background-color: white;
+    font-family: serif;
+    width: 280px;
+    height: auto;  
+}
+/*recursionのリンクの色*/
+.about-container a{
+    color: blue;
 }
 body a{
-    color: #F72C5B;
+    color: blueviolet;
     text-decoration: none; 
+    font-family: serif;
 }
+/*開発者リスト*/
 ul{
     list-style: square;
-    font-size: 2rem;
 }
 ul li::marker{
     color: #ff63c3;
-}
-ul li a{
-    color: blueviolet;
 }

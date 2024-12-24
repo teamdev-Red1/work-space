@@ -28,3 +28,9 @@ if(document.title == "開発者一覧"){
         window.location.href ="index.html";
     })
 }
+
+if(document.title == "about"){
+    CONFIG.return.addEventListener("click",function(){
+        window.location.href ="index.html";
+    })
+}
